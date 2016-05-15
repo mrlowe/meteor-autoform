@@ -15,7 +15,7 @@ AutoForm.addFormType('insert', {
 
     // See if the collection has a schema attached
     var collectionHasSchema = (
-        (typeof collection.simpleSchemas === "function" && collection.simpleSchemas().length > 0) ||
+        (typeof collection.simpleSchemas === "function" && collection.simpleSchemas() != null && collection.simpleSchemas().length > 0) ||
         (typeof collection.simpleSchema === "function" && collection.simpleSchema() != null));
 
     // Run "before.insert" hooks
